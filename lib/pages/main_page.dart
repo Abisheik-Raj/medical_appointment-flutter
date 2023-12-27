@@ -1,3 +1,5 @@
+import "package:appointment_app/components/appointment_component.dart";
+import "package:appointment_app/components/doctor_speciality_component.dart";
 import "package:flutter/material.dart";
 
 class MainPage extends StatelessWidget {
@@ -93,6 +95,13 @@ class MainPage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
+            AppointmentComponent(),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -109,7 +118,55 @@ class MainPage extends StatelessWidget {
                       fontFamily: "PoppinsBold"),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                DoctorSpeciality(
+                  icon: Icons.people_alt,
+                  text: "Doctor",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.person_2_outlined,
+                  text: "Dentist",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.earbuds,
+                  text: "Otology",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.remove_red_eye,
+                  text: "Cardiology",
+                )
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                DoctorSpeciality(
+                  icon: Icons.handshake,
+                  text: "Intestine",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.pets,
+                  text: "Vetenerian",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.rice_bowl,
+                  text: "Herbal",
+                ),
+                DoctorSpeciality(
+                  icon: Icons.more_horiz,
+                  text: "More",
+                )
+              ],
+            ),
           ],
         ),
       ),
